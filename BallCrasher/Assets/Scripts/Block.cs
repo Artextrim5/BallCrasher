@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class Block : MonoBehaviour
 
     [SerializeField] AudioClip breakClip;
     [SerializeField] GameObject blokSparklesVFX;
-    [SerializeField] int maxHits;
+    [SerializeField] Sprite[] hitSprites;
 
     // cached  reference
 
@@ -45,9 +46,27 @@ public class Block : MonoBehaviour
     private void HandleHit()
     {
         timesHit++;
+        int maxHits = hitSprites.Length + 1;
         if (timesHit >= maxHits)
         {
             DestroyBlock();
+        }
+        else
+        {
+            ShowNextHitsprite();            
+        }
+    }
+
+    private void ShowNextHitsprite()
+    {
+        int spriteIndex = timesHit - 1;
+        if (hitSprites[spriteIndex] != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        }
+        else
+        {
+            Debug.LogError("Block sprite is missing" + gameObject.name);
         }
     }
 
