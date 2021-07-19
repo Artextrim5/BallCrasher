@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1765469838218679113}
   - component: {fileID: 1765469838218679158}
   - component: {fileID: 1765469838218679159}
-  - component: {fileID: 1765469838218679157}
   - component: {fileID: 1640850877}
+  - component: {fileID: 1765469838218679157}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -122,27 +122,6 @@ CircleCollider2D:
   m_Offset: {x: 0.005127549, y: 0.013674974}
   serializedVersion: 2
   m_Radius: 0.20487225
---- !u!114 &1765469838218679157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765469838218679114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae7e9adab218968489dc6ad4c0e73306, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paddle1: {fileID: 0}
-  xPush: 2
-  yPush: 10
-  ballSounds:
-  - {fileID: 8300000, guid: 196e8f867a1a8bc499e0637e82ae6bb3, type: 3}
-  - {fileID: 8300000, guid: f33a79bf08dee07428d8f5211682fa3f, type: 3}
-  - {fileID: 8300000, guid: c4674cd09f75c7b49a524da6c1f0d61c, type: 3}
-  - {fileID: 8300000, guid: 48c3295062e6ea04eae7b878d720a352, type: 3}
-  randomFactor: 0.5
 --- !u!82 &1640850877
 AudioSource:
   m_ObjectHideFlags: 0
@@ -239,3 +218,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1765469838218679157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765469838218679114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7e9adab218968489dc6ad4c0e73306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paddle1: {fileID: 0}
+  xPush: 2
+  yPush: 10
+  ballSounds:
+  - {fileID: 8300000, guid: 196e8f867a1a8bc499e0637e82ae6bb3, type: 3}
+  - {fileID: 8300000, guid: f33a79bf08dee07428d8f5211682fa3f, type: 3}
+  - {fileID: 8300000, guid: c4674cd09f75c7b49a524da6c1f0d61c, type: 3}
+  - {fileID: 8300000, guid: 48c3295062e6ea04eae7b878d720a352, type: 3}
+  randomFactor: 0.5
